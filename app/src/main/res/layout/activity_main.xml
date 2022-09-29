@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".uiLoginScreen.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login Here"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        android:layout_margin="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_loginemail"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:hint="EMAIL"
+        android:background="@drawable/round_bg"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_loginPassword"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:hint="Password"
+        android:background="@drawable/round_bg"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text="LOGIN"
+        android:onClick="onClickLogin"
+        android:id="@+id/btn_login"/>
+
+</LinearLayout>
+</layout>
