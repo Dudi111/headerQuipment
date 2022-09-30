@@ -15,14 +15,17 @@ import com.example.appdemo3.vehicalReportUi.VehicleReportActivity
 import com.example.appdemo3.uiLoginScreen.viewmodel.LoginViewModel
 import java.math.BigInteger
 import java.security.MessageDigest
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
     companion object{
         var accessToken : String =""
+        var expireTime : String =""
         const val grantType = "password"
+        var startTime : String = ""
     }
-
 
     private lateinit var LoginviewModel : LoginViewModel
     private lateinit var ActivityMainBinding : ActivityMainBinding
@@ -48,6 +51,9 @@ class MainActivity : AppCompatActivity() {
         LoginviewModel.loginliveData.observe(this){
             if (it != null){
                 accessToken = it.access_token
+                expireTime = it.expires_in.toString()
+                startTime = SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(Date())
+
                 val intent= Intent(this, VehicleReportActivity::class.java)
                 startActivity(intent)
             }else{

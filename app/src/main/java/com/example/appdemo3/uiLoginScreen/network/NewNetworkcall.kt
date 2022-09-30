@@ -11,6 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object NewNetworkcall {
 
     val httploggingintercepter= HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
+
     private fun getretrofit() : Retrofit {
         return Retrofit.Builder()
             .baseUrl( "https://qappwebapi-test.quipment.nl/").addConverterFactory(GsonConverterFactory.create())
@@ -30,5 +31,4 @@ object NewNetworkcall {
     }
 
     fun getapiservice()= getretrofit().create(ApiService::class.java)
-
 }

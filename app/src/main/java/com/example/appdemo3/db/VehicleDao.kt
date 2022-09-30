@@ -10,7 +10,6 @@ import com.example.appdemo3.vehicalReportUi.shiftmodel.ResponseDetail
 @Dao
 interface VehicleDao {
 
-
     @Insert
     fun insertVehicalDetails(vehicalReport:List<ResponseDetail>)
 

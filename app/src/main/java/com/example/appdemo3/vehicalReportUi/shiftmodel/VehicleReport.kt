@@ -7,6 +7,4 @@ data class VehicleReport(
     val Message: String,
     val ResponseCode: Int,
     val ResponseDetail: List<ResponseDetail>
-
-
 )

@@ -15,8 +15,6 @@ object NetworkCall {
     private var retrofit: Retrofit? = null
     var token:String=""
 
-
-
     val client: Retrofit
         get() {
             interceptor = HttpLoggingInterceptor()
@@ -48,5 +46,4 @@ object NetworkCall {
         }
 
     fun getApiService()= client.create(ApiService::class.java)
-
 }

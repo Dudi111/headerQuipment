@@ -10,8 +10,6 @@ import retrofit2.http.POST
 
 interface ApiService {
 
-
-
     @FormUrlEncoded
     @POST("token")
     @Headers(
@@ -24,7 +22,6 @@ interface ApiService {
         @Field("password") password : String?,
         @Field("grant_type") grant_type : String?
     ): Call<LoginResponse>
-
 
     @FormUrlEncoded
     @POST("api/boordComputer/GetVicinityVehicles")

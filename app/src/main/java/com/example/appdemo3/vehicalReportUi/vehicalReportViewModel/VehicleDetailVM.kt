@@ -14,7 +14,6 @@ class VehicleDetailVM() : ViewModel() {
     private var vehicleReportMutableData = MutableLiveData<VehicleReport>()
     val vehicleReportliveData : LiveData<VehicleReport> = vehicleReportMutableData
 
-
     fun getVehicleReport(lat:String?, requestTime:String?, lng:String?, radius:Int?){
         NewNetworkcall.getapiservice().getShiftDetails( lat, requestTime, lng, radius).enqueue(object : Callback<VehicleReport>
         {
